@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="tustyle.css">
+</head>
+<body>
+<div id="box">
+    <ul id="tab">
+        <li style="background: white">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+    </ul>
+    <div id="con">
+        <p style="display: block">1JavaScript 中的所有事物都是对象：字符串、数值、数组、函数...
+            此外，JavaScript 允许自定义对象。
+            JavaScript 对象
+            JavaScript 提供多个内建对象，比如 String、Date、Array 等等。
+            对象只是带有属性和方法的特殊数据类型。
+            JavaScript 是面向对象的语言，但 JavaScript 不使用类。
+            在 JavaScript 中，不会创建类，也不会通过类来创建对象（就像在其他面向对象的语言中那样）。
+            JavaScript 基于 prototype，而不是基于类的。
+            在 JavaScript 中创建变量通常称为“声明”变量。
+            我们使用 var 关键词来声明变量：
+            var carname;
+            变量声明之后，该变量是空的（它没有值）。
+            如需向变量赋值，请使用等号：
+            carname="Volvo";
+            不过，您也可以在声明变量时对其赋值：
+            var carname="Volvo";</p>
+        <p>2您可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可：
+            var name="Gates", age=56, job="CEO";
+            声明也可横跨多行：
+            var name="Gates",
+            age=56,
+            job="CEO";
+            属性是与对象相关的值。
+            访问对象属性的语法是：
+            objectName.propertyName
+            这个例子使用了 String 对象的 length 属性来获得字符串的长度：
+        </p>
+        <p>3这个例子使用了 String 对象的 toUpperCase() 方法来将文本转换为大写：
+            var message="Hello world!";
+            var x=message.toUpperCase();</p>
+    </div>
+</div>
+<script>
+    var tab = document.getElementById("tab").getElementsByTagName("li");
+        con = document.getElementById("con").getElementsByTagName("p");
+    for (var i = 0;i<tab.length;i++){
+        tab[i].index=i;
+        tab[i].onclick = function (){
+            for (var j = 0;j<con.length;j++){
+                con[j].style.display="none";
+                tab[j].style.background="";
+            }
+            con[this.index].style.display="block";
+            tab[this.index].style.background="white";
+        }
+    }
+</script>
+</body>
+</html>

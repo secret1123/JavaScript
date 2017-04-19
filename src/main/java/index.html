@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div id="box">
+    <ul id="xinwen">
+        <li style="background: darkslategrey">新闻</li>
+        <li>图片</li>
+        <li>游戏</li>
+    </ul>
+    <div id="con">
+        <p>1111111111111111111111111111111111111111111</p>
+        <p>222222222222222222222222222222222222</p>
+        <p>333333333333333333333333333333333333</p>
+    </div>
+</div>
+<script>
+    var lis = document.getElementById("xinwen").getElementsByTagName("li"),
+        con = document.getElementById("con").getElementsByTagName("p");
+    //点击每个导航，让它出现所对应的内容
+    for (var i=0;i<lis.length;i++) {
+        lis[i].index=i;
+        console.log(lis[i].index);
+        //循环出每个li，添加点击事件
+        lis[i].onclick = function(){
+            //让所有的p隐藏
+            for (var j = 0;j<con.length;j++){
+                con[j].style.display= "none";
+                lis[j].style.background="";
+            }
+            con[this.index].style.display="block";//点击当前对象的索引
+            lis[this.index].style.background="#2f4f4f";
+        }
+    }
+</script>
+</body>
+</html>

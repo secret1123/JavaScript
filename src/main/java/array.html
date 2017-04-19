@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box {
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+        }
+        #box p {
+            height: 200px;
+        }
+        #box button {
+            margin-top: 300px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <p id="con"></p>
+    <button id="btn1">开始</button>
+    <button id="btn2">暂停</button>
+</div>
+<script>
+    var arr=['<img src="img/boy_204.56666666667px_1204857_easyicon.net.png"/>',
+    '<img src="img/boy_236.09607843137px_1204854_easyicon.net.png"/>',
+    '<img src="img/boy_236.09607843137px_1204865_easyicon.net.png"/>',
+       '<img src="img/boy_244.33137254902px_1204853_easyicon.net.png"/>',
+        '<img src="img/boy_321.61764705882px_1204851_easyicon.net.png"/>',
+        '<img src="img/girl_381.33529411765px_1204894_easyicon.net.png"/>',
+        '<img src="img/girl_220.04901960784px_1204893_easyicon.net.png"/>',
+        '<img src="img/girl_269.88431372549px_1204890_easyicon.net.png"/>',
+        '<img src="img/girl_296.70784313725px_1204891_easyicon.net.png"/>',
+        '<img src="img/girl_446.13529411765px_1204892_easyicon.net.png"/>'
+    ];
+    var con = document.getElementById("con");
+        btn1 = document.getElementById("btn1");
+        btn2 = document.getElementById("btn2");
+        //点击开始 名字循环
+    var i = 0;
+    function aa() {
+        con.innerHTML = arr[i];
+        i++;
+        //如果到最后一个 i=0
+        if (i>arr.length-1) {
+            i=0;
+        }
+    }
+    btn1.onclick = function () {
+        sl = setInterval(aa,100);//设置定时器，时间毫秒
+    };
+    btn2.onclick = function () {
+        clearInterval(sl);//清除定时器
+    };
+    //点击暂停按钮  循环停止
+</script>
+</body>
+</html>

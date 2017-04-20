@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            width: 1000px;
+            height: 400px;
+            background: black;
+            overflow: hidden;
+            margin: 100px auto;
+        }
+        button {
+            margin-top: 500px;
+            margin-left: 200px;
+        }
+        #con{
+            width: 1600px;
+            height: 400px;
+        }
+        #con li {
+            width: 600px;
+            height: 400px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="con">
+        <img src="img/boy_236.09607843137px_1204854_easyicon.net.png" alt="">
+        <img src="img/girl_269.88431372549px_1204890_easyicon.net.png" alt="">
+        <img src="img/boy_244.33137254902px_1204853_easyicon.net.png" alt="">
+        <!--<img src="img/girl_446.13529411765px_1204892_easyicon.net.png" alt="">-->
+    </ul>
+    <button id="btn1">开始</button>
+    <button id="btn2">暂停</button>
+</div>
+<script>
+    var con = document.getElementById('con');
+    function auto() {
+        //获取ul的marginLeft
+        //parseInt
+        var cleft = parseInt(con.style.marginLeft);
+        if(!cleft){
+            cleft=0;
+        }
+        if (cleft>-400){
+            con.style.marginLeft=cleft-5+'px'
+        }else {
+            con.style.marginLeft=0;
+        }
+    }
+    setInterval(auto,30);
+    btn1.onclick = function () {
+        sl = setInterval(auto,100);//设置定时器，时间毫秒
+    };
+    btn2.onclick = function () {
+        clearInterval(sl);//清除定时器
+    };
+    //点击暂停按钮  循环停止
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            width: 600px;
+            height: 300px;
+            margin: 40px auto;
+            border: 1px solid darkred;
+            position: relative;
+            overflow: hidden;
+        }
+        #box ul li{
+            float: left;
+        }
+        #num{
+            position: absolute;
+            width: 240px;
+            height: 40px;
+            right: 40px;
+            bottom: 20px;
+        }
+        #num li{
+            width: 38px;
+            height: 38px;
+            border: 1px solid darkcyan;
+            float: left;
+            color: hotpink;
+            text-align: center;
+            line-height: 38px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="imgs">
+        <li><img src="img/boy_244.33137254902px_1204853_easyicon.net.png" alt=""></li>
+        <li><img src="img/girl_446.13529411765px_1204892_easyicon.net.png" alt=""></li>
+        <li><img src="img/boy_204.56666666667px_1204857_easyicon.net.png" alt=""></li>
+        <li><img src="img/girl_269.88431372549px_1204890_easyicon.net.png" alt=""></li>
+        <li><img src="img/boy_236.09607843137px_1204854_easyicon.net.png" alt=""></li>
+        <li><img src="img/girl_220.04901960784px_1204893_easyicon.net.png" alt=""></li>
+    </ul>
+    <ol id="num">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ol>
+    <script>
+        var imgs=document.getElementById('imgs').getElementsByTagName('li'),
+            nums=document.getElementById('num').getElementsByTagName('li');
+        for(var i=0;i<nums.length;i++){
+            nums[i].index=i;
+            nums[i].onmouseover=function () {
+                //鼠标滑过数字的时候，让所有图片隐藏，数字背景清空
+                for (var j=0;j<imgs.length;j++){
+                    imgs[j].style.display='none';
+                    nums[j].style.background='none';
+                }
+                nums[this.index].style.background='red';
+                imgs[this.index].style.display='block';
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

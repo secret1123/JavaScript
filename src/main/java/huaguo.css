@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    width: 700px;
+    height: 320px;
+}
+#box{
+    width: 700px;
+    height: auto;
+    margin: 40px auto;
+}
+#box ul{
+    width: 700px;
+    height: auto;
+}
+#box ul li{
+    width: 700px;
+    height: 320px;
+    position: relative;
+    border: 2px solid darkmagenta;
+}
+#box ul li p{
+    width: 700px;
+    height: 50px;
+    line-height: 50px;
+    color: rebeccapurple;
+    background: rgba(198, 83, 140,0.5);
+    /*opacity: 0.3;*/
+    left: 0px;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    display: none;
+
+}

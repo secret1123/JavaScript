@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="huaguo.css">
+</head>
+<body>
+<div id="box">
+    <ul id="imgs">
+        <li><img src="img/81.jpg" alt=""><p>北方有佳人</p></li>
+        <li><img src="img/82.jpg" alt=""><p>绝世而独立</p></li>
+        <li><img src="img/83.jpg" alt=""><p>一顾倾人城</p></li>
+        <li><img src="img/84.jpg" alt=""><p>再顾倾人国</p></li>
+        <li><img src="img/85.jpg" alt=""><p>宁不知倾城与倾国？佳人难再得。</p></li>
+    </ul>
+</div>
+<script>
+    var lis=document.getElementsByTagName('ul')[0].getElementsByTagName('li');
+    //划过每个li的时候，加边框，离开时，边框消失
+    for(var i=0;i<lis.length;i++){
+        lis[i].onmouseover=function () {
+            this.style.border='2px solid darkmagenta';
+            this.getElementsByTagName('p')[0].style.display='block';
+            this.getElementsByTagName('p')[0].style.color='rebeccapurple';
+        };
+        lis[i].onmouseout=function () {
+            this.style.border='2px solid #ccc';
+            this.getElementsByTagName('p')[0].style.display='none';
+            this.getElementsByTagName('p')[0].style.color='#fff';
+        }
+    }
+</script>
+</body>
+</html>

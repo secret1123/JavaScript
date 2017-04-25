@@ -33,6 +33,26 @@
             -webkit-animation: m2 1s linear infinite alternate;
         }
 
+        .loading3 {
+            background: hotpink;
+            -webkit-animation: m3 1s linear infinite alternate;
+        }
+
+        .loading4 {
+            background: skyblue;
+            -webkit-animation: m4 1s linear infinite alternate;
+        }
+
+        .loading5 {
+            background: darkslategrey;
+            -webkit-animation: m5 1s linear infinite alternate;
+        }
+
+        .loading6 {
+            background: orangered;
+            -webkit-animation: m6 1s linear infinite alternate;
+        }
+
         @-webkit-keyframes m1 {
             from {
                 -webkit-transform: scale(0.8);
@@ -50,11 +70,47 @@
                 -webkit-transform: scale(0.8);
             }
         }
+
+        @-webkit-keyframes m3 {
+            from {
+                -webkit-transform: scale(0.8);
+            }
+            to {
+                -webkit-transform: scale(1.2);
+            }
+        }
+
+        @-webkit-keyframes m4 {
+            from {
+                -webkit-transform: scale(1.2);
+            }
+            to {
+                -webkit-transform: scale(0.8);
+            }
+        }
+
+        @-webkit-keyframes m5 {
+            from {
+                -webkit-transform: scale(0.8);
+            }
+            to {
+                -webkit-transform: scale(1.2);
+            }
+        }
+
+        @-webkit-keyframes m6 {
+            from {
+                -webkit-transform: scale(1.2);
+            }
+            to {
+                -webkit-transform: scale(0.8);
+            }
+        }
     </style>
 </head>
 <body>
 <div id="box">
-    <div class="loading1"></div><div class="loading2"></div>
+    <div class="loading1"></div><div class="loading2"></div><div class="loading4"></div><div class="loading3"></div><div class="loading6"></div><div class="loading5"></div>
 </div>
 </body>
 </html>

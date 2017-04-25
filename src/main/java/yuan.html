@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 100px;
+            height: 50px;
+            margin: 20px auto;
+        }
+
+        #box div {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        .loading1 {
+            background: sandybrown;
+            -webkit-animation: m1 1s linear infinite alternate;
+        }
+
+        .loading2 {
+            background: lightcoral;
+            -webkit-animation: m2 1s linear infinite alternate;
+        }
+
+        @-webkit-keyframes m1 {
+            from {
+                -webkit-transform: scale(0.8);
+            }
+            to {
+                -webkit-transform: scale(1.2);
+            }
+        }
+
+        @-webkit-keyframes m2 {
+            from {
+                -webkit-transform: scale(1.2);
+            }
+            to {
+                -webkit-transform: scale(0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="loading1"></div><div class="loading2"></div>
+</div>
+</body>
+</html>

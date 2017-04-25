@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            width: 1300px;
+            height: 700px;
+        }
+        #box {
+            width: 6500px;
+            height: 700px;
+            margin: 40px auto;
+            position: absolute;
+            -webkit-animation: a 10s linear 3s infinite;
+        }
+            @-webkit-keyframes a {
+                0%{
+                    left: 0;
+                }
+                30%{
+                    left: -1300px;
+                }
+                60%{
+                    left: -2600px;
+                }
+                75%{
+                    left: -3900px;
+                }
+                100%{
+                    left: -5200px;
+                }
+            }
+    </style>
+</head>
+<body>
+<div id="box"><img src="img/81.jpg" alt=""><img src="img/82.jpg" alt=""><img src="img/83.jpg" alt=""><img src="img/84.jpg" alt=""><img src="img/85.jpg" alt=""></div>
+</body>
+</html>

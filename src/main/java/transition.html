@@ -3,8 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            margin: 100px;
+            width: 100px;
+            height: 80px;
+            background: darkseagreen;
+            position: relative;
+            padding: 10px;
+            display: block;
+            text-align: center;
+
+            -webkit-animation: m  5s 1 ;
+            -webkit-border-radius: 5px;
+        }
+        @-webkit-keyframes m {
+            0%{
+                transform: rotate(0deg);
+                left: 0;
+            }
+            25%{
+                transform: rotate(20deg);
+                left: 0;
+            }
+            50%{
+                transform: rotate(0deg);
+                left: 500px;
+            }
+            55%{
+                transform: rotate(0deg);
+                left: 500px;
+            }
+            70%{
+                transform: rotate(0deg);
+                left: 500px;
+                background: lightseagreen;
+            }
+            100%{
+                transform: rotate(-360deg);
+                left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-
+<div id="box"></div>
 </body>
 </html>

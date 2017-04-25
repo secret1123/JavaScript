@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 200px;
+            height: 200px;
+            background: darkred;
+            border-radius: 20px;
+            -webkit-transform: rotate(45deg);
+            -webkit-transition: all 1s;
+        }
+
+        p{
+            font-size: 160px;
+            line-height: 200px;
+            text-align: center;
+            color: black;
+            font-family: "Apple LiSung";
+            -webkit-transform: rotate(135deg);
+            -webkit-transition: all 3s;
+        }
+
+        #box:hover{
+            -webkit-transform: rotate(1000deg);
+        }
+        p:hover{
+            -webkit-transform: rotate(0deg);
+        }
+
+    </style>
+</head>
+<body>
+<div id="box"><p>福</p></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #radioBox{
+            width: 153px;
+            height: 27px;
+            margin: 20px auto;
+            position: relative;
+        }
+        #radioBox input{
+            position: absolute;
+            opacity: 0;
+        }
+        #radioBox label{
+            width: 77px;
+            height: 27px;
+            border-radius: 15px;
+            display: block;
+            background: url("img/kkk.png");
+            -webkit-transition: all 1s;
+        }
+        #radioBox input:checked+label{
+            background-position: -51px 0;
+        }
+        
+    </style>
+</head>
+<body>
+<div id="radioBox">
+    <input type="checkbox" id="check">
+    <label for="check"></label>
+</div>
+</body>
+</html>

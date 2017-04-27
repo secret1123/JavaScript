@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #moreChecked{
+            width: 200px;
+            height: 25px;
+            margin: 20px auto;
+        }
+        #moreChecked li{
+            line-height: 25px;
+            float: left;
+            position: relative;
+        }
+        #moreChecked li input{
+            position: absolute;
+            opacity: 0;
+        }
+        #moreChecked li label{
+            width: 25px;
+            height: 25px;
+            display: block;
+            padding-left: 30px;
+            background: url("img/an.png") no-repeat;
+            background-position: 0 -25px;
+        }
+        #moreChecked li input:checked+label{
+            background-position: 0 0;
+        }
+    </style>
+</head>
+<body>
+<ul id="moreChecked">
+    <li><input type="radio" name="check" id="input1"><label for="input1">大</label></li>
+    <li><input type="radio" name="check" id="input2"><label for="input2">中</label></li>
+    <li><input type="radio" name="check" id="input3"><label for="input3">小</label></li>
+</ul>
+</body>
+</html>

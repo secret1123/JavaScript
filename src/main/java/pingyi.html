@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            margin-top: 100px;
+            margin-left: 50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-image: url("img/choose_small.png");
+            -webkit-animation: model 3s linear 100ms infinite alternate ;
+        }
+
+        @-webkit-keyframes model {
+            0%{
+                -webkit-transform: translate(0px);
+            }
+            25%{
+                -webkit-transform: translateX(400px);
+            }
+            50%{
+                -webkit-transform: translate(400px,400px);
+            }
+            75%{
+                -webkit-transform: translate(0px,400px);
+            }
+            100%{
+                -webkit-transform: translate(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>

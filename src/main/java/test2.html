@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--用js实现焦点图效果，打开浏览器轮播执行 相对应的圆点变红。-->
+<!--鼠标划过圆点时 轮播停止 鼠标离开圆点时 轮播继续执行。-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            width: 820px;
+            height: 461px;
+        }
+
+        #box {
+            width: 820px;
+            height: 461px;
+            margin: 50px auto;
+            position: relative;
+            border: dashed 3px darkcyan;
+        }
+
+        #box ul li {
+            float: left;
+        }
+
+        #btn {
+            position: absolute;
+            width: 240px;
+            height: 40px;
+            right: 40px;
+            bottom: 10px;
+        }
+
+        #btn li {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            float: left;
+            margin: 0 10px 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="imgs">
+        <li><img src="img/01.jpg" alt=""></li>
+        <li><img src="img/02.jpg" alt=""></li>
+        <li><img src="img/03.jpg" alt=""></li>
+        <li><img src="img/04.jpg" alt=""></li>
+        <li><img src="img/05.jpg" alt=""></li>
+        <li><img src="img/06.jpg" alt=""></li>
+    </ul>
+    <ol id="btn">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <script>
+        var imgs = document.getElementById('imgs').getElementsByTagName('li'),
+            btn = document.getElementById('btn').getElementsByTagName('li');
+        var k = 0;
+        function auto() {
+            for (var i = 0; i < btn.length; i++) {
+                imgs[i].style.display = 'none';
+                btn[i].style.background = 'darkcyan';
+            }
+            imgs[k].style.display = 'block';
+            btn[k].style.background = 'red';
+            k++;
+            if (k > btn.length - 1) {
+                k = 0;
+            }
+        }
+        sl = setInterval(auto, 1500);
+        for (var i = 0; i < btn.length; i++) {
+            btn[i].index = i;
+            btn[i].onmouseover = function () {
+                clearInterval(sl);
+
+                for (var j = 0; j < imgs.length; j++) {
+                    imgs[j].style.display = 'none';
+                    btn[j].style.background = 'darkcyan';
+                }
+                btn[this.index].style.background = 'red';
+                imgs[this.index].style.display = 'block';
+            };
+            btn[i].onmouseout = function () {
+                k = this.index;
+                sl = setInterval(auto, 1500);
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

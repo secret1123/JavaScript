@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper{
+            width:960px;
+            margin: auto;
+            background: #ffcccc;
+            height: 2000px;
+        }
+        #top{
+            width: 30px;
+            height: 60px;
+            background: silver;
+            color: darkgoldenrod;
+            text-align: center;
+            line-height: 60px;
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            display: none;
+            border-top-right-radius: 10px;
+        }
+
+        #top:hover{
+            background: #900;
+            color: #ffcccc;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            var top = $('#top')
+            top.css('left',($(window).width()+960)/2+'px');
+            $(window).scroll(function () {
+                if ($(this).scrollTop()>1000){
+                    $('#top').fadeIn(1000);
+                }else {
+                    $('#top').fadeOut(1000);
+                }
+            });
+            top.click(function () {
+                $(window).scrollTop(0);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="wrapper"></div>
+<div id="top">top</div>
+</body>
+</html>

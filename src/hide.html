@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 100px;
+            margin-top: 50px;
+        }
+        p{
+            background: darkseagreen;
+        }
+    </style>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $('button').click(function () {
+            $('p').slideDown(3000);
+            });
+        });
+    </script>
+</head>
+<body>
+<div><p>。。。。。。。。。。。。。。</p></div>
+<button>click</button>
+</body>
+</html>

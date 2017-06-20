@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            margin-top: 100px;
+            margin-left: 200px;
+        }
+        th{
+            width: 260px;
+        }
+        td{
+            text-align: center;
+            height: 100px;
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $('th').css('background','gray');
+            $('tr:even').css('background','#ffc').click(function () {
+                $('td:even').css('background','#ccf');
+            });
+            $('tr:odd').css('background','#fcc');
+        });
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+</table>
+</body>
+</html>
